@@ -15,8 +15,8 @@ on:
     branches: 
       - master
 
-  schedule:
-    - cron: 0 8 * * 5
+  #schedule:
+  #  - cron: 0 8 * * 5
   
  # watch:
  #   types: [started]
@@ -63,7 +63,7 @@ jobs:
         REPO_BRANCH: master
       run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
 
-    - name: Update & Install feeds
+    - name: 更新/安装依赖
       working-directory: ./openwrt
       run: |
         ./scripts/feeds update -a
