@@ -5,7 +5,7 @@
 # Youtube Channel: https://goo.gl/fvkdwm 
 #=================================================
 
-name: 搭建编译环境
+name: K2P固件编译
 
 on: 
   release:
@@ -29,7 +29,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master
 
-    - name: Initialization environment
+    - name: 搭建编译环境
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
