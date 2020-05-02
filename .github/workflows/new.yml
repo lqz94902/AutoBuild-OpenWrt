@@ -70,10 +70,10 @@ jobs:
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         ./scripts/feeds install -a
-    #- name: Import external feeds
-    #  working-directory: ./openwrt
-    #  run: |
-    #    git clone https://github.com/Lienol/openwrt-package package/lienol
+    - name: Import external feeds
+      working-directory: ./openwrt
+      run: |
+        svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus package/lean/luci-app-ssr-plus
     #    git clone "your_github_link" package/"your_folder_name"      
 
     - name: Configuration Customization - Build_x86
