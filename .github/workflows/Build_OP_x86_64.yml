@@ -69,8 +69,6 @@ jobs:
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         ./scripts/feeds install -a
-        svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus package/lean/luci-app-ssr-plus
-      
       
     - name: 自定义插件主题。
       run: |
@@ -79,6 +77,8 @@ jobs:
         cd openwrt-packages
         git clone https://github.com/destan19/OpenAppFilter.git
         git clone https://github.com/fw876/helloworld.git  
+        cd ..
+        cd ..
 
     - name: 客制化
       env:
