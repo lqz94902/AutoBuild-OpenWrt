@@ -71,6 +71,14 @@ jobs:
         ./scripts/feeds install -a
         svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus package/lean/luci-app-ssr-plus
       
+      
+    - name: 自定义插件主题。
+      run: |
+        cd package
+        mkdir openwrt-packages
+        cd openwrt-packages
+        git clone https://github.com/destan19/OpenAppFilter.git
+        git clone https://github.com/fw876/helloworld.git  
 
     - name: 客制化
       env:
