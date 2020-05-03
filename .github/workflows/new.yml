@@ -73,7 +73,7 @@ jobs:
     - name: Import external feeds
       working-directory: ./openwrt
       run: |
-        svn co https://github.com/lqz94902/helloworld/tree/master/luci-app-ssr-plus package/lean/luci-app-ssr-plus
+        git clone https://github.com/lqz94902/helloworld/tree/master/luci-app-ssr-plus package/lean/luci-app-ssr-plus
     #    git clone "your_github_link" package/"your_folder_name"      
 
     - name: Configuration Customization - Build_x86
