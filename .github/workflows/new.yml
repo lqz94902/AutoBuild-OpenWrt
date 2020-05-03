@@ -77,11 +77,9 @@ jobs:
         
     - name: 自定义插件主题。
       run: |
-        cd package
-        mkdir openwrt-packages
-        cd openwrt-packages
-        git clone https://github.com/destan19/OpenAppFilter.git
-        git clone https://github.com/fw876/helloworld.git  
+        mkdir package/openwrt-packages
+        git clone https://github.com/destan19/OpenAppFilter.git package/openwrt-packages
+        git clone https://github.com/fw876/helloworld.git  package/openwrt-packages
 
     - name: Configuration Customization - Build_x86
       env:
