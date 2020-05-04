@@ -66,15 +66,6 @@ jobs:
         cd openwrt
         sed -i '5s/#//' feeds.conf.default
         
-    - name: 自定义插件主题。
-      run: |
-        cd package
-        mkdir openwrt-packages
-        cd openwrt-packages
-        git clone https://github.com/destan19/OpenAppFilter.git
-        git clone https://github.com/fw876/helloworld.git
-        df -h
-        
     - name: Update & Install feeds
       working-directory: ./openwrt
       run: |
