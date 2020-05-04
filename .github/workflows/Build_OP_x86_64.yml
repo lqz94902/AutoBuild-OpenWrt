@@ -45,7 +45,7 @@ jobs:
           
       - name: 自定义插件主题。
         run: |
-          cd package
+          cd ./lede/package
           mkdir openwrt-packages
           cd openwrt-packages
           git clone https://github.com/destan19/OpenAppFilter.git
